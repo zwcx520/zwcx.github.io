@@ -1,0 +1,463 @@
+/*产品中心*/
+.bannerBg2 {
+	width: 100%;
+	min-height: 360px;
+	background: url(../img/banner2.png) center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: inline-block;
+}
+.HomeMain {
+	display: table;
+	margin: 80px auto 120px;
+}
+.HomeLeft {
+	float: left;
+	margin-right: 40px;
+}
+.HomeLeft li {
+	width: 160px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	margin-bottom: 18px;
+	color: #333333;
+	cursor: pointer;
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+.HomeLeft li.active {
+	color: #ffffff;
+	background: #1782F1;
+}
+.HomeRight {
+	padding-left: 200px;
+}
+.HomeRightMain{
+	width: 100%;
+	display: block;
+}
+.HomeRightUL {
+	display: table;
+}
+.HomeRightUL li {
+	display: inline-block;
+	vertical-align: top;
+}
+.HomeCenter {
+	width: 300px;
+	min-height: 270px;
+	margin-right: 50px;
+	margin-bottom: 40px;
+	padding: 0 30px 12px;
+	border: 1px solid #EEEEEE;
+	background: #ffffff;
+    -moz-box-shadow: 5px 5px 5px 0 rgba(196,196,196,.35);
+    -webkit-box-shadow: 5px 5px 5px 0 rgba(196,196,196,.35);
+    box-shadow: 5px 5px 5px 0 rgba(196,196,196,.35);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+.HomeRightUL li:nth-child(3n) .HomeCenter {
+	margin-right: 0;
+}
+.HomeCTitle {
+	font-size: 20px;
+	color: #333333;
+	margin: 20px 0;
+}
+.HomeCTitle img {
+	max-width: 30px;
+	max-height: 30px;
+	margin-right: 10px;
+}
+.HomeCWord {
+	font-size: 14px;
+	color: #6F6F6F;
+	min-height: 120px;
+	margin-bottom: 12px;
+    line-height: 200%;
+}
+.HomeCBtn {
+	width: 120px;
+	height: 40px;
+	font-size: 16px;
+	background: #ffffff;
+    color: #1782F1;
+    border: 1px solid #DDDDDD;
+    cursor: pointer;
+    outline: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+.HomeCenter:hover{
+	border: 1px solid #1782F1;
+}
+.HomeCenter:hover .HomeCBtn{
+	background: #1782F1;
+    color: #ffffff;
+    border: 1px solid #1782F1;
+}
+/*适配*/
+@media only screen and (max-width: 1242px) {
+	.HomeRightUL {
+		display: table-cell;
+	}
+	.HomeRightUL li {
+		float: left;
+		width: 50%;
+	}
+	.HomeCenter {
+		width: 100%;
+		height: 270px;
+		margin-right: 0;
+		margin-bottom: 40px;
+	}
+	.HomeRightUL li:nth-child(odd) {
+		padding-right: 10px;
+	}
+	.HomeRightUL li:nth-child(even) {
+		padding-left: 10px;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.HomeLeft {
+		width: 100%;
+		margin-right: 0;
+	}
+	.HomeLeft li {
+		float: left;
+		width: auto;
+		height: 38px;
+		line-height: 38px;
+		padding: 0 4px;
+		font-size: 14px;
+	}
+	.HomeRight {
+		padding-left: 0;
+	}
+	.HomeCenter {
+		padding: 0 12px;
+	}
+}
+@media only screen and (max-width: 420px) {
+	.bannerBg2 {
+		min-height: 260px;
+	}
+	.HomeMain {
+		margin: 40px auto;
+	}
+	.HomeRightUL li {
+		width: 100%;
+	}
+	.HomeRightUL li:nth-child(odd) {
+		padding-right: 0;
+	}
+	.HomeRightUL li:nth-child(even) {
+		padding-left: 0;
+	}
+	.HomeCenter {
+		height: auto;
+		min-height: 270px;
+	}
+}
+
+/*打包app*/
+.bannerBg6 {
+	width: 100%;
+	min-height: 360px;
+	background: url(../img/banner6.png) center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: inline-block;
+}
+.BaleBg {
+	display: table;
+	margin: 80px auto 50px;
+}
+
+.HomeLeftTwo {
+	float: left;
+	margin-right: 40px;
+}
+.HomeLeftTwo li {
+	width: 160px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	margin-bottom: 18px;
+	cursor: pointer;
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+.HomeLeftTwo li.active {
+	color: #ffffff;
+	background: #1782F1;
+}
+
+
+.BaleLeft{
+	float: left;
+	width: 530px;
+	padding-left: 48px;
+	padding-right: 48px;
+}
+.BaleTitle {
+    font-size: 24px;
+    color: #333333;
+    margin: 0 0 24px;
+}
+.BaleTitle a{
+    font-size: 24px;
+    color: #333333;
+    margin: 0 0 24px;
+}
+.BaleWord {
+    font-size: 14px;
+    color: #6F6F6F;
+    line-height: 24px;
+    min-height: 124px;
+    margin-bottom: 30px;
+    line-height: 200%;
+}
+.BaleBtn{
+	width: 110px;
+	height: 30px;
+    background: #ffffff;
+    color: #1782F1;
+    margin-right: 12px;
+    margin-bottom: 30px;
+    border: 1px solid #DDDDDD;
+    cursor: pointer;
+    outline: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+.BaleRight{
+	float: left;
+	width: 470px;
+}
+.Bale{
+	max-width: 100%;
+	width: 750px;
+}
+.freeChoice{
+	width: 100%;
+	display: table;
+}
+.freeChoice>li{
+	display: inline-block;
+	width: 33.3333%;
+	padding: 0 20px;
+	margin-bottom: 24px;
+	vertical-align: top;
+}
+.freeMain{}
+.ThinTop{
+	width: 100%;
+	height: 10px;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -ms-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+.ThinColor1{
+	background: #5D89FA;
+}
+.ThinColor2{
+	background: #2765F1;
+}
+.ThinColor3{
+	background: #4934D7;
+}
+.ThinColor4{
+	background: #FDAE65;
+}
+.ThinColor5{
+	background: #232528;
+}
+.ThinColor6{
+	background: #E51A55;
+}
+.freeTop{
+	width: 100%;
+	min-height: 50px;
+	font-size: 18px;
+	color: #333333;
+	text-align: center;
+	padding: 12px 4px;
+	border: 1px solid #D7D7D7;
+	border-top: none;
+}
+.VerMain{
+	min-height: 230px;
+	border: 1px solid #D7D7D7;
+	border-top: none;
+	text-align: center;
+}
+.VerTitle{
+	font-size: 23px;
+	color: #333333;
+	margin: 20px 0 28px;
+	display: inline-block;
+}
+.VerSubTitle{
+	font-size: 18px;
+	color: #333333;
+	margin-bottom: 10px;
+}
+.VerTime{
+	font-size: 14px;
+	color: #797979;
+	margin-bottom: 10px;
+}
+.VerCost{
+	font-size: 14px;
+	color: #797979;
+	margin-bottom: 10px;
+}
+.VerPrice{
+	font-size: 14px;
+	font-weight: bold;
+	color: #E51A55;
+	margin-bottom: 10px;
+}
+.VerBtn{
+	width: 108px;
+    height: 40px;
+    background: #059FFF;
+    font-size: 13px;
+    color: #ffffff;
+    margin-right: 12px;
+    margin-bottom: 30px;
+    border: 1px solid #059FFF;
+    cursor: pointer;
+    outline: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.freeDown{
+	height: 650px;
+	padding: 12px 26px;
+	min-height: 230px;
+	border: 1px solid #D7D7D7;
+	border-top: none;
+}
+.belowWord{
+	font-size: 14px;
+	color: #B2B6BF;
+	margin-bottom: 8px;
+}
+.below{
+	
+}
+.below li{
+	width: 100%;
+	padding-left: 24px;
+	margin-bottom: 8px;
+	background: url(../img/SmakeFull.png);
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: 0 4px;
+    line-height: 180%;
+}
+.belowBtn{
+	font-size: 14px;
+	color: #1782F1;
+	margin: 12px auto 30px;
+}
+.belowBtn:hover{
+	color: #1782F1;
+}
+.belowBgTow{
+	background: url(../img/belowBgTow.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: inline-block;
+    width: 100%;
+}
+.belowASBtn{
+	width: 140px;
+	height: 40px;
+	margin: 0 auto 30px;
+	display: block;
+}
+/*适配*/
+@media only screen and (max-width: 1400px){}
+@media only screen and (max-width: 1242px){}
+@media only screen and (max-width: 1200px){
+	.BaleLeft{
+		width: 60%;
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+	.BaleRight{
+		width: 40%;
+	}
+	.BaleBtn{
+		margin-bottom: 12px;
+	}
+}
+@media only screen and (max-width: 920px){
+	.BaleLeft{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.freeChoice>li{
+		width: 50%;
+	}
+}
+@media only screen and (max-width: 768px){
+	.HomeLeftTwo {
+		width: 100%;
+		margin-right: 0;
+	}
+	.HomeLeftTwo li {
+		float: left;
+		width: auto;
+		height: 38px;
+		line-height: 38px;
+		padding: 0 4px;
+		font-size: 14px;
+	}
+	.BaleLeft{
+		width: 100%;
+	}
+	.BaleRight{
+		width: 100%;
+	}
+	.freeChoice>li{
+		width: 100%;
+	}
+	.freeDown{
+		height: auto;
+	}
+}
+@media only screen and (max-width: 420px){
+	.bannerBg6 {
+		min-height: 260px;
+	}
+}
+

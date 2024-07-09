@@ -1,0 +1,39 @@
+.PopUpsBg{
+	display: none;
+	width: 100%;
+	height: 100%;
+	padding: 10px 0;
+	background: rgba(0,0,0,.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999999;
+}
+/*防止冲突*/
+.PopUpsBgt{
+	display: none;
+	width: 100%;
+	height: 100%;
+	padding: 10px 0;
+	background: rgba(0,0,0,.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999999;
+}
+.Tpop-closet{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	padding: 0;
+	background: 0 0;
+	border: none;
+	outline: 0;
+	cursor: pointer;
+	font-size: 22px;
+	color: #999999;
+}
