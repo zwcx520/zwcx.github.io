@@ -1,0 +1,64 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="icon" type="image/png" href="/Public/img/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/Public/img/app-icon72x72@2x.png">
+<title>在线文本转换HTML工具</title>
+<link rel="shortcut icon" href="../../4.ico" type="image/x-icon">
+<meta name="keywords" content="文本转HTML,在线文本转换HTML工具,txt转html代码" />
+<meta name="description" content="在线文本转换HTML工具，可以把文本转换成HTML代码带换行符、段落标签等，方便在没有富文本编辑器的地方发布信息。" />
+<link href="1.css" rel="stylesheet">
+<script type="text/javascript" src="1.js" async></script>
+</head>
+
+<body>
+
+<div class="content">
+	<div class="content-body">
+        <div class="tool-title clearfix">
+            <h1 class="tool-name">文本转HTML工具</h1>
+            
+        </div>
+		<div class="tool-form">
+			<div class="row">
+				<div class="col-2">
+					<div class="form-field"><textarea id="tool-text" class="form-textarea form-block" tabindex="1" name="text" placeholder="请输入需要转换的文本"></textarea></div>
+					<div class="form-btn">
+						<p><label><input type="radio" id="pTagbrTag" name="linebreaks" value="pbr" checked="checked"> <strong>&lt;p&gt;</strong> &amp; <strong>&lt;br&gt;</strong>: 使用段落和换行符标签</label></p>
+						<p><label><input type="radio" id="pTag" name="linebreaks" value="p"> <strong>&lt;p&gt;</strong>: 仅使用段落标签</label></p>
+						<p><label><input type="radio" id="brTag" name="linebreaks" value="br"> <strong>&lt;br&gt;</strong>: 仅使用换行符标签</label></p>
+						<p><label><input type="checkbox" name="tfEncode" id="tfEncode" value="yes"> 对字符进行编码</label></p>
+					</div>
+					<div class="form-btn">	
+						<input class="btn btn-success" id="btn-convert" type="button" value="转换">
+						<input class="btn btn-warning btn-copy" type="button" value="复制结果" data-clipboard-target="#tool-result">
+						<input class="btn btn-error" type="reset" value="清空内容">
+					</div>
+					<div id="tool-tips"></div>
+				</div>
+				<div class="col-2">
+					<div class="form-field"><textarea id="tool-result" class="form-textarea form-block"></textarea></div>
+				</div>
+			</div>
+			<p class="tips">提示：输入的文本推荐是纯文本，若包含html代码工具会自动htmlencode转码处理。两个段落的文本如需要&lt;p&gt;标签分隔，请在两段文本间空一行。</p>
+			
+		</div>
+		<div class="wwads-cn wwads-horizontal" data-id="102" style="max-width:100%"></div>	</div>
+	<div class="footer">
+
+<div id="go-top" style="display:none;">
+    <a rel="nofollow" title="回顶部"><i class="icon-up-big"></i></a>
+</div>
+</div>
+<script type="text/javascript">var WW_APP='/';var WW_PUBLIC='/Public/';var WW_URL='/home/text2html/';var WW_TID=55;var WW_UID=0;</script>
+<script src="2.js"></script>
+<script src="3.js"></script>
+</body>
+</html>

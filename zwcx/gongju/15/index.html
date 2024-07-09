@@ -1,0 +1,175 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="icon" type="image/png" href="/Public/img/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/Public/img/app-icon72x72@2x.png">
+<title>在线条形码生成器工具-可批量生成UPC/EAN条形码</title>
+<link rel="shortcut icon" href="../../4.ico" type="image/x-icon">
+<meta name="keywords" content="条形码生成工具,在线条形码生成工具,条形码生成器,批量生成条形码" />
+<meta name="description" content="免费在线条形码生成器是一款在线EAN13/EAN8/UPC等条形码生成工具，本工具可以自定义条形码样式，支持多种条形码标准，并且支持批量生成条形码和一键下载功能。" />
+<link href="1.css" rel="stylesheet">
+<script type="text/javascript" src=1.js" async></script>
+<style>
+.barcode-setting .form-input{min-width:200px}.barcode-output{border:1px solid #ccc;border-radius:3px;padding:.375rem .5rem;font-size:.9rem;color:#555;background-color:#f8f8f8;min-height:13.75rem;max-height:40rem;overflow-y:scroll;text-align:center}.barcode-output img{margin:.5rem}
+</style>
+</head>
+
+<body>
+
+<div class="content">
+	<div class="content-body">
+        <div class="tool-title clearfix">
+            <h1 class="tool-name">条形码生成器</h1>
+            <script type="text/javascript">var TID = 67;</script>
+              </div>
+		<div class="tool-form">
+			<div class="row">
+				<div class="col-2">
+					<div class="form-field"><textarea id="tool-text" class="form-textarea form-block" tabindex="1" name="text" placeholder="请输入条形码内容，支持批量生成，一行一个编码，最多10条"></textarea></div>
+					<div class="form-field">
+						<select class="form-input form-block" id="barcode-type">
+						  <option value="" selected="selected">选择条码类型</option>
+						  <option value="CODE128">CODE128 Auto</option>
+						  <option value="CODE128A">CODE128 A</option>
+						  <option value="CODE128B">CODE128 B</option>
+						  <option value="CODE128C">CODE128 C</option>
+						  <option value="EAN13">EAN13</option>
+						  <option value="EAN8">EAN8</option>
+						  <option value="UPC">UPC</option>
+						  <option value="CODE39">CODE39</option>
+						  <option value="ITF14">ITF14</option>
+						  <option value="ITF">ITF</option>
+						  <option value="MSI">MSI</option>
+						  <option value="MSI10">MSI10</option>
+						  <option value="MSI11">MSI11</option>
+						  <option value="MSI1010">MSI1010</option>
+						  <option value="MSI1110">MSI1110</option>
+						  <option value="pharmacode">Pharmacode</option>
+						</select>		
+					</div>
+					<div class="form-btn">
+						<input class="btn btn-success" id="btn-generator" type="button" value="生成条形码">
+					</div>
+					<div id="tool-tips"></div>
+					<div class="barcode-setting">
+						<div class="form-field">
+							<label>线条宽度</label>
+							<select class="form-input" id="bar-width">
+							  <option value="1">细线条</option>
+							  <option value="2" selected="selected">默认宽度</option>
+							  <option value="3">中等宽度</option>
+							  <option value="4">粗线条</option>
+							</select>		
+						</div>
+						<div class="form-field">
+							<label>条码高度</label>
+							<select class="form-input" id="bar-height">
+							  <option value="20">20</option>
+							  <option value="30">30</option>
+							  <option value="40">40</option>
+							  <option value="50">50</option>
+							  <option value="60">60</option>
+							  <option value="70">70</option>
+							  <option value="80" selected="selected">80</option>
+							  <option value="90">90</option>
+							  <option value="100">100</option>
+							  <option value="110">110</option>
+							  <option value="120">120</option>
+							  <option value="130">130</option>
+							  <option value="140">140</option>
+							  <option value="150">150</option>
+							 </select>		
+						</div>
+						<div class="form-field">
+							<label>留空间距</label>
+							<input type="number" class="form-input" id="bar-margin" value="0" />	
+						</div>
+						<div class="form-field">
+							<label>显示文本</label>
+							<label><input type="radio" name="display-text" value="true" checked="checked"> 显示</label>
+							<label><input type="radio" name="display-text" value="false"> 不显示</label>
+						</div>
+						<div id="font-options">
+							<div class="form-field">
+								<label>对齐方式</label>
+								<label><input type="radio" name="text-align" value="left"> 左</label>
+								<label><input type="radio" name="text-align" value="center" checked="checked"> 中</label>
+								<label><input type="radio" name="text-align" value="right"> 右</label>
+							</div>
+							<div class="form-field">
+								<label>文本字体</label>
+								<select class="form-input" id="font-family">
+								  <option value="Courier" selected="selected">Courier</option>
+								  <option value="Monospace">Monospace</option>
+								  <option value="sans-serif">Sans-serif</option>
+								  <option value="Arial">Arial</option>
+								  <option value="Georgia">Georgia</option>
+								  <option value="Verdana">Verdana</option>
+								  <option value="fantasy">Fantasy</option>
+								 </select>		
+							</div>
+							<div class="form-field">
+								<label>字体大小</label>
+								<select class="form-input" id="font-size">
+								  <option value="8">8px</option>
+								  <option value="9">9px</option>
+								  <option value="10">10px</option>
+								  <option value="11">11px</option>
+								  <option value="12">12px</option>
+								  <option value="13">13px</option>
+								  <option value="14">14px</option>
+								  <option value="16">16px</option>
+								  <option value="18" selected="selected">18px</option>
+								  <option value="20">20px</option>
+								  <option value="22">22px</option>
+								  <option value="24">24px</option>
+								  <option value="32">32px</option>
+								  <option value="36">36px</option>
+								  <option value="48">48px</option>
+								  <option value="54">54px</option>
+								 </select>	
+							</div>
+							<div class="form-field">
+								<label>图文间距</label>
+								<input type="number" class="form-input" id="bar-text-margin" value="0" size="10" />	
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-field"><div class="barcode-output"><p>此处将显示条形码图片</p></div></div>
+					<div class="form-btn"><input class="btn btn-warning" id="btn-save" type="button" disabled="disabled" value="保存文件"></div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="wwads-cn wwads-horizontal" data-id="102" style="max-width:100%"></div>		<div class="tool-info">
+		    <h5>条形码</h5>
+			<p>条形码(barcode)是将宽度不等的多个黑条和空白，按照一定的编码规则排列，用以表达一组信息的图形标识符。常用的条形码有EAN商品用条码、UPC通用产品代码、CODE128码、pharmacode条码。</p>
+			<h5>EAN码</h5>
+			<p>EAN码是国际物品编码协会制定的一种商品用条码，通用于全世界。EAN码符号有标准版（EAN-13）和缩短版（EAN-8）两种。标准版表示13位数字，又称为EAN13码，缩短版表示8位数字，又称EAN8。两种条码的最后一位为校验位，由前面的12位或7位数字计算得出。</p>
+			<h5>UPC码</h5>
+			<p>通用产品代码（Universal Product Code），通常简称UPC码，是美国均匀码理事会（Uniform Code Council, UCC）制定的一种商品条码，主要在美国及加拿大使用。在其基础之上发展起来的EAN码则已发展成为适用范围最广的通用条码。UPC-A码是定长码，只能表示12位数字。</p>
+			<h5>CODE128码</h5>
+			<p>CODE128码是广泛应用在企业内部管理、生产流程、物流控制系统方面的条码码制，由于其优良的特性在管理信息系统的设计中被广泛使用，CODE128码是应用最广泛的条码码制之一。</p>
+		</div>
+		
+	</div>
+	<div class="footer">
+	
+</div>
+<script type="text/javascript">var WW_APP='/';var WW_PUBLIC='/Public/';var WW_URL='/home/barcode/';var WW_TID=67;var WW_UID=0;</script>
+<script src="2.js"></script>
+<script src="3.js"></script>
+<script src="4.js"></script>
+<script src="5.js"></script>
+<script src="6.js"></script>
+</body>
+</html>

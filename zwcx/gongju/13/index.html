@@ -1,0 +1,53 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta id="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="icon" type="image/png" href="/Public/img/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/Public/img/app-icon72x72@2x.png">
+<title>在线二维码解码器工具，可在线扫描二维码识别结果</title>
+<link rel="shortcut icon" href="../../4.ico" type="image/x-icon">
+<meta name="keywords" content="二维码解码工具,二维码解码器,二维码扫描在线使用" />
+<meta name="description" content="网页版在线二维码解码器工具，可在线扫描二维码，上传二维码后识别出二维码的内容。" />
+<link href="1.css" rel="stylesheet">
+<script type="text/javascript" src="1.js" async></script>
+<style type="text/css">
+.img-select{position:relative;z-index:0;height:150px;width:120px;margin:0 auto;margin-bottom:15px}.img-select canvas{width:120px;height:120px;z-index:1;background-image:url('/Public/img/img-empty.png')}.img-select input[type="file"]{position:absolute;width:120px;height:140px;opacity:0;top:0;left:0;overflow:hidden;z-index:10;cursor:pointer}.img-select p{width:120px;text-align:center;color:#666;line-height:20px;font-size:14px}
+</style>
+</head>
+
+<body>
+
+<div class="content">
+	<div class="content-body">
+		<div class="tool-title clearfix">
+			<h1 class="tool-name">二维码解码器</h1>
+			</div>
+		<div class="tool-form">
+			<div class="img-select">
+				<canvas id="qr-canvas" width="120" height="120" alt="选择二维码图片"></canvas>
+                <input type="file" name="files" accept="image/*" onchange="handleFiles(this.files)" title="选择二维码图片" >
+				<p>选择二维码图片</p>
+            </div>
+			<div id="tool-result" class="hide"></div>
+			
+		</div>
+		<div class="wwads-cn wwads-horizontal" data-id="102" style="max-width:100%"></div>		<div class="tool-info">
+		   <h5>相关知识</h5>
+		   <p>本工具利用js库解析二维码，部分浏览器或部分手机安装软件后不支持选择二维码图片。</p>
+		</div>
+		
+	</div>
+	<div class="footer">
+
+</div>
+<script type="text/javascript">var WW_APP='/';var WW_PUBLIC='/Public/';var WW_URL='/home/qrcodereader/';var WW_TID=36;var WW_UID=0;</script>
+<script src="2.js"></script>
+<script src="3.js"></script>
+</body>
+</html>

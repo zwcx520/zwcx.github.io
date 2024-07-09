@@ -1,0 +1,146 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="icon" type="image/png" href="/Public/img/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/Public/img/app-icon72x72@2x.png">
+<title>重量单位换算器工具</title>
+<link rel="shortcut icon" href="../../4.ico" type="image/x-icon">
+<meta name="keywords" content="重量单位换算器,重量转换工具,重量单位换算工具," />
+<meta name="description" content="重量单位换算器工具提供了换算重量功能，目前支持千克、克、毫克、吨、磅、盎司、克拉、担、斤、两等各种重量单位之间的转换。" />
+<link href="1.css" rel="stylesheet">
+<script type="text/javascript" src="1.js" async></script>
+</head>
+
+<body>
+
+<div class="content">
+	<div class="content-body">
+		<div class="tool-title clearfix">
+			<h1 class="tool-name">重量单位换算器</h1>
+			</div>
+		<div class="tool-form">
+			<div class="exchange-panel">
+				<h3>公制</h3>
+				<ul class="clearfix">
+					<li>
+						<label>吨(t)</label>
+						<p><input class="form-input form-block" type="number" name="mTon" size="12"/></p>
+					</li>
+					<li>
+						<label>千克(kg)</label>
+						<p><input class="form-input form-block" type="number" name="mKilogram" size="12"/></p>
+					</li>
+					<li>
+						<label>克(g)</label>
+						<p><input class="form-input form-block" type="number" name="mGram" size="12"/></p>
+					</li>
+					<li>
+						<label>毫克(mg)</label>
+						<p><input class="form-input form-block" type="number" name="mMilligram" size="12"/></p>
+					</li>
+				</ul>
+				<h3>市制</h3>
+				<ul class="clearfix">
+					<li>
+						<label>担</label>
+						<p><input class="form-input form-block" type="number" name="cDan" size="12"/></p>
+					</li>
+					<li>
+						<label>斤</label>
+						<p><input class="form-input form-block" type="number" name="cJin" size="12"/></p>
+					</li>
+					<li>
+						<label>两</label>
+						<p><input class="form-input form-block" type="number" name="cLiang" size="12"/></p>
+					</li>
+					<li>
+						<label>钱</label>
+						<p><input class="form-input form-block" type="number" name="cQian" size="12"/></p>
+					</li>
+				</ul>
+				<h3>常衡制</h3>
+				<ul class="clearfix">
+					<li>
+						<label>磅(lb)</label>
+						<p><input class="form-input form-block" type="number" name="avdpPound" size="12"/></p>
+					</li>
+					<li>
+						<label>盎司(oz)</label>
+						<p><input class="form-input form-block" type="number" name="avdpOunce" size="12"/></p>
+					</li>
+					<li>
+						<label>打兰(dr)</label>
+						<p><input class="form-input form-block" type="number" name="avdpDram" size="12"/></p>
+					</li>
+					<li>
+						<label>格令(gr)</label>
+						<p><input class="form-input form-block" type="number" name="avdpGrain" size="12"/></p>
+					</li>
+					<li>
+						<label>(英制)长吨</label>
+						<p><input class="form-input form-block" type="number" name="briTon" size="12"/></p>
+					</li>
+					<li>
+						<label>(美制)短吨</label>
+						<p><input class="form-input form-block" type="number" name="usTon" size="12"/></p>
+					</li>
+					<li>
+						<label>英担(cwt)</label>
+						<p><input class="form-input form-block" type="number" name="briCWT" size="12"/></p>
+					</li>
+					<li>
+						<label>美担(cwt)</label>
+						<p><input class="form-input form-block" type="number" name="usCWT" size="12"/></p>
+					</li>
+					<li>
+						<label>英石(st)</label>
+						<p><input class="form-input form-block" type="number" name="briStone" size="12"/></p>
+					</li>
+				</ul>
+				<h3>金衡制</h3>
+				<ul class="clearfix">
+					<li>
+						<label>金衡磅(lb t)</label>
+						<p><input class="form-input form-block" type="number" name="troyPound" size="12"/></p>
+					</li>
+					<li>
+						<label>金衡盎司(oz t)</label>
+						<p><input class="form-input form-block" type="number" name="troyOunce" size="12"/></p>
+					</li>
+					<li>
+						<label>英钱(dwt)</label>
+						<p><input class="form-input form-block" type="number" name="troyDWT" size="12"/></p>
+					</li>
+					<li>
+						<label>金衡格令</label>
+						<p><input class="form-input form-block" type="number" name="troyGrain" size="12"/></p>
+					</li>
+				</ul>
+			</div>
+			<div class="form-btn">
+				<input type="button" value="重置数据" class="btn btn-success btn-reset" />
+			</div>
+			<div id="tool-tips"></div>
+			<div id="tool-result" class="hide"></div>
+			
+		</div>
+		<div class="wwads-cn wwads-horizontal" data-id="102" style="max-width:100%"></div>		<div class="tool-info">
+		    <h5>相关知识</h5>
+			<p>本工具目前提供千克(kg)、克(g)、毫克(mg)、微克(μg)、吨(t)、磅(lb)、盎司(oz)、克拉(ct)、格令(gr)、担、斤、两、钱、英担(cwt)、美担(cwt)、英石(st)、打兰(dr)的重量单位转换。</p>
+		</div>
+	</div>
+	<div class="footer">
+
+</div>
+<script type="text/javascript">var WW_APP='/';var WW_PUBLIC='/Public/';var WW_URL='/home/zhongliang/';var WW_TID=64;var WW_UID=0;</script>
+<script src="2.js"></script>
+<script src="3.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="icon" type="image/png" href="/Public/img/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/Public/img/app-icon72x72@2x.png">
+<title>二维码生成器</title>
+<link rel="shortcut icon" href="../../4.ico" type="image/x-icon">
+<meta name="keywords" content="在线二维码生成工具,二维码生成器" />
+<meta name="description" content="在线二维码生成器工具能方便的把文本转换成二维码，支持网址转换成二维码。" />
+<link href="1.css" rel="stylesheet">
+<script type="text/javascript" src="https://cdn.wwads.cn/js/makemoney.js" async></script>
+</head>
+
+<body>
+
+<div class="content">
+	<div class="content-body">
+		<div class="tool-title clearfix">
+			<h1 class="tool-name">二维码生成器</h1>
+			</div>
+		<div class="tool-form">
+			<div class="form-field">内容：<input type="text" name="data" size="50" class="form-input" id="tool-text" placeholder="请输入网址或其他内容" /></div>
+			<div class="form-field">尺寸：<input type="number" name="size" size="3" class="form-input" id="tool-size" value="200" /></div>
+			<div class="form-btn">
+				<button class="btn btn-success" type="button" onclick="qrcode_convert();">生成二维码</button>   
+			</div>
+			<div id="tool-tips"></div>
+			<div id="tool-result" class="hide"><div id="qrcode"></div></div>
+			<p class="tips">提示：如需扫描二维码自动跳到网页，请填写完整的URL，如：http://www.iamwawa.cn/</p>
+			
+		</div>
+		<div class="wwads-cn wwads-horizontal" data-id="102" style="max-width:100%"></div>		<div class="tool-info">
+		    <h5>相关知识</h5>
+			<p>二维码又称QR Code，QR全称Quick Response，是一个近几年来移动设备上超流行的一种编码方式，它比传统的Bar Code条形码能存更多的信息，也能表示更多的数据类型。</p>
+			<p>
+二维条码/二维码（2-dimensional bar code）是用某种特定的几何图形按一定规律在平面（二维方向上）分布的黑白相间的图形记录数据符号信息的；在代码编制上巧妙地利用构成计算机内部逻辑基础的“0”、“1”比特流的概念，使用若干个与二进制相对应的几何形体来表示文字数值信息，通过图象输入设备或光电扫描设备自动识读以实现信息自动处理：它具有条码技术的一些共性：每种码制有其特定的字符集；每个字符占有一定的宽度；具有一定的校验功能等。同时还具有对不同行的信息自动识别功能、及处理图形旋转变化点。</p>
+		   </div>
+		
+	</div>
+	<div class="footer">
+
+
+</div>
+<script type="text/javascript">var WW_APP='/';var WW_PUBLIC='/Public/';var WW_URL='/home/qrcode/';var WW_TID=7;var WW_UID=0;</script>
+<script src="2.js"></script>
+<script src="3.js"></script>
+</body>
+</html>
