@@ -1,0 +1,83 @@
+body {
+    background: #f3f6fa;
+    font-family: "微软雅黑","Helvetica Neue",Helvetica,Arial,"PingFang SC","Microsoft YaHei";
+}
+
+.wrapper{position:relative;display:block;overflow: hidden;}
+.main-left{float:left}
+.main-right{float:right;width:300px;min-height:351px}
+.main-bg{box-shadow:0 1px 3px #dbdbdb}
+.index-left-box{background:#fff;width:100%;min-height:319px;padding:15px;border-radius: 8px;}
+.index-right-box{background:#fff;border-radius: 8px;}
+.index-right-box .item{margin-bottom:0!important}
+
+.slider-wrap{float:left;width:420px;height:319px}
+.slider{width:700px;height:100%;background-color:#fff;position:relative;overflow:hidden;}
+.slider .swiper-container{width:100%;height:100%;}
+.slider .swiper-slide{font-size:18px;background:#fff;position:relative;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center;}
+.slider .swiper-pagination{text-align:right;}
+.slider .swiper-pagination-bullet{background-color:#fafafa;width:12px;height:12px;}
+.slider .swiper-pagination-bullet-active{background:#fff;}
+.slider .swiper-button-next,.swiper-container-rtl .swiper-button-prev{background:url(../images/slider-arrow.png) no-repeat;}
+.slider .swiper-button-prev,.swiper-container-rtl .swiper-button-next{background:url(../images/slider-arrow.png) no-repeat;transform:rotate(180deg);}
+.slider .swiper-slide:hover{filter:alpha(Opacity=90);-moz-opacity:.9;opacity:.9;}
+.slider .swiper-slide img{width:700px;height:320px;object-fit:cover;overflow:hidden;}
+.slider .swiper-slide p{position:absolute;left:0;right:0;bottom:0;color:#fff;background-color:rgba(0,0,0,.6);height:40px;line-height:40px;padding-left:3%;padding-right:20%;overflow:hidden;text-align:center;}
+
+.recommend{float:right;width:350px;height:319px;display:block}
+.recommend .recommend-top{overflow:hidden;height:90px;width:100%;display:block}
+.recommend .recommend-top h2{white-space: nowrap;height:36px;text-align:center;font-weight:700;font-size:18px;line-height:36px;margin: 0;}
+.recommend .recommend-top p{overflow:hidden;height:44px;color:#aaa;font-size:13px;line-height:22px;padding-left:5px}
+.recommend .recommend-bottom{display:block;overflow:hidden;border-top:1px dotted #ccc;padding-top:5px;padding-left:5px;height:225px}
+.recommend .recommend-bottom li{float:left;display:block;padding-right:0;width:100%;height:32px;line-height:32px}
+.recommend .recommend-bottom li:before{position:relative;top:16px;float:left;display:inline-block;margin-right:10px;width:5px;height:5px;border-radius:100%;background-color:#cecece;content:""}
+.recommend .recommend-bottom li a{float:left;display:block;overflow:hidden;width:330px;text-overflow:ellipsis;white-space:nowrap;font-size:16px}
+
+.category{margin: 15px auto 0;}
+
+.category .item ul li:hover:before,.main-right .item ul li:hover:before,.recommend .recommend-bottom li:hover:before{background-color:#07c;}
+.category .item,.main-right .item{float:left;margin-right:15px;margin-bottom:15px;width:363px;background:#fff;}
+.category .item:nth-child(3n+0){margin-right:0}
+.category .item .title,.main-right .item .title{overflow:hidden;margin:0 14px;height:40px;border-bottom:1px solid #eee;color:#333;font-size:18px;line-height:40px}
+.category .item {min-height:424px;border-radius: 8px;}
+.category .item .img{padding:10px 0 0 15px;}
+.category .item .img{margin-bottom:5px;height:110px;overflow:hidden}
+.category .item .img img{width:128px;float:left;height:98px;margin-right:10px;border:#e3e2d5 1px solid;padding:3px}
+.category .item .img img:hover{opacity:.6}
+.category .item .img h4{margin:8px 0;width:203px;float:left;height:25px;line-height:25px;font-weight:300;color: #333;font-size:16px;overflow:hidden}
+.category .item .img p{line-height:18px;text-indent:15px;width:203px;height:55px;float:left;color:#999;overflow:hidden;font-size:13px;}
+.category .item ul,.main-right .item ul{display:inline-block;overflow:hidden;padding:0 0 10px 15px}
+.category .item ul li,.main-right .item ul li{float:left;display:inline;padding-right:0;width:359px;height:32px;line-height:32px}
+.category .item ul li:before,.main-right .item ul li:before{position:relative;top:14px;float:left;display:inline-block;margin-right:10px;width:5px;height:5px;border-radius:100%;background-color:#cecece;content:""}
+.category .item ul li a,.main-right .item ul li a{float:left;display:block;overflow:hidden;width:340px;font-size:16px;line-height:32px;height:32px}
+.main-right .item{margin-right:0;width:300px;height:100%;border-radius: 8px;}
+.main-right .item ul.counter{padding-top:5px;list-style-type:none;counter-reset:sectioncounter}
+.main-right .item ul.counter li{overflow:hidden;width:270px}
+.main-right .item ul li a{width:260px}
+.main-right .item ul.counter li a{width:250px}
+.main-right .item ul.counter li:last-child a{width:240px}
+.main-right .item ul.counter li:before{position:relative;font-size: 16px;top:0;float:left;display:inherit;margin-right:0;padding-right:6px;width:auto;height:auto;border-radius:0;background-color:transparent;color:#999;content:"" counter(sectioncounter) ".";counter-increment:sectioncounter;font-style:italic;font-family:Georgia,Microsoft YaHei,serif}
+.main-right .item ul.counter li:hover:before{color:#07c;}
+
+@media screen and (max-width:1119px){
+	.index-left-box{width:100%;}
+	.slider-wrap{width:100%;float:none;}
+	.recommend{margin-top:10px;width:100%;}
+	.main-right{width:100%;margin-top:10px;}
+	.main-right .item{width:100%;}
+	.main-right .item ul.counter li{width:100%;}
+	.category .item,.main-right .item{width:100%;}
+	.category .item ul li,.main-right .item ul li{width:90%;}
+	.category .item .img h4{width:60%;}
+	.category .item .img p{width:60%;}
+	.category .item ul li a,.main-right .item ul li a{width:90%;}
+	.recommend .recommend-bottom li a{width:90%;}
+	.slider{width:100%;height:220px;margin-bottom:10px;}
+	.slider .swiper-slide img{width:100%;height:100%;}
+	.slider-wrap{height:auto;}
+}
+
+@media screen and (max-width:359px){
+	.category .item .img h4{width: 50%;height:auto;}
+	.category .item .img p {display: none;}
+}
