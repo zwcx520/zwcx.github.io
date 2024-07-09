@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<title>css格式化工具</title>
+<link rel="shortcut icon" href="../../4.ico" type="image/x-icon">
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<link href="1.css" rel="stylesheet">
+<link href="2.css" rel="stylesheet">
+<link href="3.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="1.js"></script>
+<script type="text/javascript" src="2.js"></script>
+<script type="text/javascript" src="3.js"></script>
+<script type="text/javascript" src="4.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="media">
+<div class="media-body">
+<h1 class="media-heading">CSS压缩格式化</h1>
+<div id="desc1">CSS代码格式化工具可实现CSS代码格式化和CSS在线压缩。压缩CSS使得体积减小,传输速度快，格式化CSS在线转换成易编写、易读。</div>
+</div>
+</div>
+</div>
+<div class="panel-body">
+<textarea id="content" name="RawJson" class="json_input top10" rows="16" style="width: 100%;" spellcheck="false" placeholder="请输入 CSS 代码"></textarea>
+<div class="btn-group" role="group" aria-label="...">
+<button type="button" class="btn btn-primary" onclick="CSS('packAdv');">完全压缩</button>
+</div>
+<div class="btn-group" role="group" aria-label="...">
+<button type="button" class="btn btn-primary" onclick="CSS('pack');">普通压缩</button>
+</div>
+<div class="btn-group" role="group" aria-label="...">
+<button type="button" class="btn btn-primary" onclick="CSS('format');">格式化</button>
+</div>
+<div class="btn-group" role="group" aria-label="...">
+<button id="copy" click-type="copy" data-clipboard-target="#content" class="btn btn-success">复制</button>
+</div>
+<div class="btn-group" role="group" aria-label="...">
+<button type="button" class="btn btn-danger" onclick="Empty();">清空结果</button>
+</div>
+</div>
+<input type="hidden" id="tabsize" value="1" />
+<div class="panel-footer"></div>
+</div>
+<script type="text/javascript">var lCSSCoder={format:function(s){s=s.replace(/\s*([\{\}\:\;\,])\s*/g,"$1");s=s.replace(/;\s*;/g,";");s=s.replace(/\,[\s\.\#\d]*{/g,"{");s=s.replace(/([^\s])\{([^\s])/g,"$1 {\n\t$2");s=s.replace(/([^\s])\}([^\n]*)/g,"$1\n}\n$2");s=s.replace(/([^\s]);([^\s\}])/g,"$1;\n\t$2");return s;},packAdv:function(s){s=s.replace(/\/\*(.|\n)*?\*\//g,"");s=s.replace(/\s*([\{\}\:\;\,])\s*/g,"$1");s=s.replace(/\,[\s\.\#\d]*\{/g,"{");s=s.replace(/;\s*;/g,";");s=s.match(/^\s*(\S+(\s+\S+)*)\s*$/);return(s==null)?"":s[1];},pack:function(s){s=s.replace(/\/\*(.|\n)*?\*\//g,"");s=s.replace(/\s*([\{\}\:\;\,])\s*/g,"$1");s=s.replace(/\,[\s\.\#\d]*\{/g,"{");s=s.replace(/;\s*;/g,";");s=s.replace(/;\s*}/g,"}");s=s.replace(/([^\s])\{([^\s])/g,"$1{$2");s=s.replace(/([^\s])\}([^\n]s*)/g,"$1}\n$2");return s;}};function CSS(s){document.getElementById("content").value=lCSSCoder[s](document.getElementById("content").value);}
+function Empty() {document.getElementById('content').value ='';document.getElementById('content').select();}
+function GetFocus() {document.getElementById('content').focus();}
+</script>
+
+</div></div></div></div></div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<title>摩斯密码加密解密</title>
+<link rel="shortcut icon" href="../../4.ico" type="image/x-icon">
+<meta name="keywords" content="摩斯密码加密,摩斯密码解密" />
+<meta name="description" content="摩斯密码加密,摩斯密码解密">
+<link href="1.css" rel="stylesheet">
+<link href="2.css" rel="stylesheet">
+<link href="3.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="1.js"></script>
+<script type="text/javascript" src="2.js"></script>
+<script type="text/javascript" src="3.js"></script>
+<script type="text/javascript" src="4.js"></script>
+<![endif]-->
+</head>
+<body><div class="aw-container-wrap"><div class="container"><div class="row"><div class="aw-content-wrap clearfix"><div class=" aw-main-content"><nav class="navbar navbar-default" id='top_menu'><div class="container-fluid"><ul class="nav navbar-nav" style="width: 100%;">
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="media">
+<div class="media-body">
+<h1 class="media-heading">摩斯密码加密,摩斯密码解密</h1>
+<div id="desc1"></div>
+</div>
+</div>
+</div>
+<div class="panel-body">
+<div class="linedwrap"><textarea id="morse_input" name="json_input" onkeyup="" class="json_input" style="height: 160px; font-size: 11px !important; resize: both; width: 100%;" rows="32" spellcheck="false" placeholder="请输入要加密的字符串"></textarea></div>
+<div class="btn-group" role="group" aria-label="...">
+<button type="button" class="btn btn-primary" onclick="encode_morse_zh();">
+生成摩斯密码</button>
+<button type="button" class="btn btn-primary" onclick="decode_morse_zh();">
+解密摩斯密码</button>
+<button type="button" class="btn btn-danger" onclick="empty()">
+清空结果</button>
+</div>
+<div class="top10" style="margin-top: 6px;">
+<div class="linedwrap"><textarea id="result_input" name="json_input" class="json_input" style="height: 160px; font-size: 11px !important; resize: both; width: 100%;" rows="32" placeholder="这里显示加密或解密后的字符串"></textarea></div>
+</div>
+<input type="hidden" id="encode" value="1">
+<pre id="results" class="top10" style="display: none;"></pre>
+<script src="5.js"></script>
+<script type="text/javascript">var decToHex =function (str) {var res =[];for (var i =0;i < str.length;i++)
+res[i] =("00" + str.charCodeAt(i).toString(16)).slice(-4);return "\\u" + res.join("\\u");}
+var hexToDec =function (str) {str =str.replace(/\\/g,"%");return unescape(str);}
+ morjs.modes.custom ={charSpacer:'',letterSpacer:'/',longString:'-',shortString:'.',wordSpacer:'/'
+};var options ={mode:'custom' };var ss ="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_@";function v10toX(n,m) {m =String(m).replace(/ /gi,"");if (m =="") return "";if (parseInt(m) !=m) {return false;} var t ="";var a =ss.substr(0,n);while (m !=0) {var b =m % n;t =a.charAt(b) + t;m =(m - b) / n } return t }
+function vXto10(n,m) {m =String(m).replace(/ /gi,"");if (m =="") return "";var a =ss.substr(0,n);if (eval("m.replace(/[" + a + "]/gi,'')") !="") {return false;} var t =0,c =1;for (var x =m.length - 1;x >-1;x--) {t +=c *(a.indexOf(m.charAt(x)));c *=n } return t }
+function vXtoY(n,m,y) {a =vXto10(n *1,m);if (a =="") return "";a =v10toX(y,a);return a }
+function M(str) {alert(str) }
+function convert(hex_input,id_input,hex_output,id_output) {var input_v =document.getElementById(id_input).value;var outputEle =document.getElementById(id_output);var hex_in_v =document.getElementById(hex_input).value;var hex_out_v =document.getElementById(hex_output).value;outputEle.value =vXtoY(hex_in_v,input_v,hex_out_v) }
+function convert_c(hex_input_v,id_input,hex_output_v,id_output) {var input_v =document.getElementById(id_input).value;var outputEle =document.getElementById(id_output);outputEle.value =vXtoY(hex_input_v,input_v,hex_output_v) }
+var morse_char_re =/[a-zA-Z0-9.:,;?=\'\/\!_\"()$&@]/;function encode_morse_zh() {var input =$('#morse_input').val();var matchs =input.match(/[\u0000-\uffff]/g);var out ="";if (matchs !=null) {for (var i =0;i < matchs.length;i++) {var match =matchs[i];if (match.trim() !='') {if (morse_char_re.test(match)) {out =out + morjs.encode(match,options) + morjs.modes.custom.letterSpacer;}
+else {var unicode =decToHex(match);if (unicode &&unicode.substring(0,2) =='\\u') {unicode =unicode.substring(2,unicode.length);unicode =vXtoY(16,unicode,2);unicode =unicode.replace(/1/g,morjs.modes.custom.longString);unicode =unicode.replace(/0/g,morjs.modes.custom.shortString);out =out + unicode + morjs.modes.custom.letterSpacer;}
+}
+}
+else {}
+};}
+ if (out !=null &&out.length >0 &&out.substring(out.length - 1,out.length)) {out =out.substring(0,out.length - 1);}
+$('#result_input').val(out);}
+function decode_morse_zh() {var input =$('#morse_input').val();out ='';if (input !=null) {input_array =input.split(morjs.modes.custom.letterSpacer);eval("var re_1 = /\\" + morjs.modes.custom.longString + "/g;");eval("var re_0 = /\\" + morjs.modes.custom.shortString + "/g;");for (var i =0;i < input_array.length;i++) {input =input_array[i];if (input !=null &&input.length >=1) {if (input.length <=5) {out =out + morjs.decode(input,options) + ' ';}
+else {input =input.replace(re_1,'1');input =input.replace(re_0,'0');input =vXtoY(2,input,16);if (input ===false ||input ==='') {out ="输入的摩斯码不符合要求！";}
+else {input ='\\u' + input;input =hexToDec(input);out =out + input + ' ';}
+}
+}
+}
+}
+$('#result_input').val(out);}
+function encode_morse() {var morse =morjs.encode($('#morse_input').val(),options);$('#result_input').val(morse);}
+function decode_morse() {var text =morjs.decode($('#morse_input').val(),options);$('#result_input').val(text);}
+function empty() {document.getElementById('morse_input').value ='';document.getElementById('result_input').value ='';document.getElementById('morse_input').focus();}
+</script>
+</div>
+<div class="panel-footer"></div>
+</div>
+
+</div>
+</body></html>

@@ -1,0 +1,17 @@
+{
+	"appName": "表白礼物.特别版",
+	"appPackageName": "top.webcat.app52121",
+	"appVersionName": "521.1314",
+	"appVersionCode": 521.1314,
+	"data": {		
+		"启用顶栏": false,
+		"顶栏标题": "",
+		"顶栏颜色": "#bebebe",
+		"横屏": false,
+		"显示状态栏": true,
+		"启用进度条": true,
+		"进度条颜色": "#00000000",
+		"支持打开外部应用": false,
+		"启动页面": "index.html"
+	}
+}
