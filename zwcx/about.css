@@ -1,0 +1,169 @@
+/*关于我们*/
+.bannerBg3 {
+	width: 100%;
+	min-height: 360px;
+	background: url(../img/banner3.jpg) center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: inline-block;
+}
+.CompanyMain{
+	display: table;
+}
+.Company{
+	float: left;
+	margin-right: 40px;
+	margin-bottom: 40px;
+}
+.CompanyWord{
+}
+.CompanyWord p{
+	font-size: 16px;
+	color: #333333;
+	line-height: 28px;
+	margin-bottom: 28px;
+}
+.ideaMain{
+	width: 300px;
+	padding: 0 22px;
+	border: 1px solid #EEEEEE;
+	margin-bottom: 30px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+}
+.ideaImg{
+	width: 150px;
+	height: 150px;
+	margin: 16px auto 0;
+	display: block;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+}
+.ideaTitle{
+	font-size: 20px;
+	color: #333333;
+	margin: 12px 0;
+	text-align: center;
+}
+.ideaWord{
+	font-size: 16px;
+	color: #AAAAAA;
+	margin-bottom: 24px;
+}
+.SubTitle{
+	font-size: 16px;
+	color: #333333;
+	width: 610px;
+	margin: auto;
+	text-align: center;
+	margin-bottom: 34px;
+}
+.BigTitleMargin2{
+	margin: 55px auto 10px;
+}
+.UsMap{
+	width: 50%;
+	margin-bottom: 100px;
+}
+.UsMap p{
+	font-size: 18px;
+	color: #333333;
+	line-height: 48px;
+}
+.UsMap span{
+	font-size: 18px;
+	color: #333333;
+	line-height: 48px;
+	padding-left: 55px;
+}
+.UsMap img{
+	max-width: 100%;
+    margin: auto;
+    display: block;
+}
+.UsMapImg{
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+}
+.Honor img{
+	width: 175px;
+	height: 250px;
+	max-width: 100%;
+}
+@media only screen and (max-width: 1200px) {
+	.ideaMain{
+		width: 260px;
+	}
+	.Honor{
+		width: 19%;
+		height: auto;
+	}
+	.Honor img{
+		height: 228px;
+	}
+}
+@media only screen and (max-width: 920px){
+	.ideaMain{
+		width: 220px;
+		padding: 0 14px;
+	}
+	.UsMap p,.UsMap span{
+		font-size: 16px;
+		line-height: 38px;
+	}
+	.Honor img{
+		height: 204px;
+	}
+}
+@media only screen and (max-width: 768px){
+	.Company {
+		width: 100%;
+	    float: left;
+	    margin-right: 0;
+	    margin-bottom: 12px;
+	}
+	.CompanyWord{
+		width: 100%;
+		float: left;
+	}
+	.ideaMain{
+		width: 100%;
+	}
+	.Honor{
+		width: 50%;
+		height: auto;
+		float: left;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	.SubTitle {
+	    width: 90%;
+	}
+	.UsMap{
+		width: 100%;
+		margin-bottom: 40px;
+	}
+	.Honor img{
+		height: 244px;
+	}
+}
+@media only screen and (max-width: 420px) {
+	.bannerBg3 {
+		min-height: 260px;
+	}
+	.Honor{
+		width: 100%;
+	}
+	.Honor img{
+		height: auto;
+	}
+}
